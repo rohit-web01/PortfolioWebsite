@@ -1,0 +1,66 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+/* Navbar CSS */
+.container{
+    width: 1200px;
+    margin: 0 auto;
+    /* border: 2px solid black; */
+}
+
+.navbar{
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-part{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+#R{
+    font-family: fantasy;
+    font-size: 5rem;
+    text-shadow: 0 0 .3rem red;
+}
+
+h1{
+    font-size: 2rem;
+    margin-left: -.4rem;
+}
+
+.nav-items{
+    /* border: 1px solid black; */
+    display: flex;
+    gap: 2rem;
+    padding: 0 4em;
+}
+
+.nav-items div a{
+    padding: .2rem;
+    color: black;
+    font-size: larger;
+    font-family: system-ui;
+    font-weight:400;
+}
+
+.nav-items div:hover{
+    font-weight: 600;
+    transition: 1s;
+}
+
+
