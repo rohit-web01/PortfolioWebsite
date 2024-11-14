@@ -20,7 +20,8 @@
 }
 
 .navbar{
-    padding-top: 1rem;
+    height: 18vh;
+    /* padding-top: 1rem; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,14 +34,17 @@
 }
 
 #R{
-    font-family: fantasy;
+    color: #4e45d5;
     font-size: 5rem;
-    text-shadow: 0 0 .3rem red;
+    text-shadow: 0 0 .1em red;
+    font-weight: 900;
+    user-select: none;
+    cursor:help;
 }
 
 h1{
     font-size: 2rem;
-    margin-left: -.4rem;
+    margin-left: -.5rem;
 }
 
 .nav-items{
@@ -63,4 +67,152 @@ h1{
     transition: 1s;
 }
 
+.fixed-navbar{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color:white;
+}
 
+/* Hero Section CSS */
+.hero-section{
+    position: relative;
+    /* margin-top: 4rem auto; */
+    /* border: 2px solid black; */
+    display: flex;
+    padding: 0 1rem;
+    padding-bottom: 8rem;
+    gap: 5rem;
+    justify-content: space-between;
+    height: 82vh;
+}
+
+.hero-left{
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem; 
+    margin-top: 5rem;
+    margin-left: 3rem;
+    justify-content: space-evenly; 
+}
+
+.name{
+    color: #343d68;
+    font-size: 2rem;
+    font-family: system-ui;
+    font-weight: 500;
+}
+
+.role{
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #4e45d5;
+}
+
+.hero-para{
+    font-size: 1.2rem; 
+    line-height: 1.3em;
+    font-family: system-ui;
+}
+
+.btn{
+    color: white;
+    padding: .8rem 2rem;
+    background-color: #e84949;
+    font-size: 18px; 
+    box-shadow: 5px 5px 7px 0px #0000003f;
+    cursor: pointer;   
+    position: relative; 
+    z-index: 1;
+    width:140px;
+    border: none;
+}
+
+.btn::before{
+    content: "";
+    background-color: white;
+    border: 2px solid #e84949;
+    border: 1px solid #4e45d5;
+
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 1s;
+    z-index: -1;
+}
+
+.btn:hover::before{
+    transform: scaleX(1);
+}
+
+.btn:hover{
+    color: black;
+    transition: 1s;
+}
+
+.faded-txt{
+    position: absolute; 
+    left: 5%;
+    bottom: 0%;
+    user-select:none;
+    font-size: 4em;
+    color: rgb(231,231,231);
+    font-weight: bold;
+ }
+
+/* Hero Section Right Side >>> */
+.hero-right{
+    position: relative;
+    right: 5rem;
+    top: 3.5rem;
+    /* border: 2px solid black; */
+    position: relative;
+} 
+
+.user-image{
+    padding: .5rem;
+    filter: grayscale(1);
+    /* transition: all 1s; */
+    animation: scaleImage 7s ease infinite;
+}
+
+.user-image img{
+    border: 1px solid blue;
+    z-index: -12;
+    animation: imageRound 7s ease-in-out infinite;
+}
+
+#dp{
+    width: 13rem;
+}
+
+/* Animations Keyframes Declarations  */
+
+@keyframes scaleImage{
+    0%{
+        filter: grayscale(0);
+        transform: scale(1);
+    }
+    
+    50%{
+        filter: grayscale(1.1);
+        transform: scale(1.1);
+        box-shadow: 3px 3px 10px black;
+        border-radius: 50%;
+    }
+
+    100%{
+        filter: grayscale(0);
+        transform: scale(1);
+    }
+}
+
+@keyframes imageRound {
+    50%{
+        border-radius: 50%;
+    }
+}
