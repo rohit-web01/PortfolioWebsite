@@ -162,7 +162,7 @@ h1{
 .faded-txt{
     position: absolute; 
     left: 3.5%;
-    bottom: 0%;
+    bottom: -2.1%;
     user-select:none;
     font-size: 5rem;
     color: rgb(231,231,231);
@@ -612,3 +612,65 @@ h1{
 
 
 /* Footer CSS */
+footer{
+    position: relative;
+    background-color: #343d68;
+}
+
+.footer-wrapper{
+    display: flex;
+    gap: 1rem;
+    padding:1.2rem 10rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.faded-rohi{
+    position: absolute; 
+    left: 0%;
+    bottom: 0%;
+    user-select:none;
+    font-size: 5em;
+    color: #535c87;
+    font-weight: bold;
+    transition: all .5s;
+}
+
+.link-wrapper{
+    display: flex;
+    gap: 1.2rem;
+}
+
+.link-wrapper a{
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+    transition: all .6s;
+}
+
+.link-wrapper a:hover{
+    color: orangered;
+}
+
+.icon-wrapper{
+    display: flex;
+    gap: 1rem;
+}
+
+.icon-wrapper a{
+    font-size: 1.3rem;
+    color: white;
+    text-decoration: none;
+    transition: all .6s;
+}
+
+.icon-wrapper a:hover{
+    color: orangered;
+}
+
+.watermark, .rights{
+    text-align: center;
+    color: white;
+}
